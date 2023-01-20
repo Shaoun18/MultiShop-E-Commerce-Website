@@ -12,7 +12,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">General Form Elements</h5>
+                            <h5 class="card-title">Add Category Form</h5>
 
                             <h4 class="text-center text-success">{{Session::get('message')}}</h4>
 

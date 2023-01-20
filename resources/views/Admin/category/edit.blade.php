@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">General Form Elements</h5>
+                            <h5 class="card-title">Edit Category Form</h5>
 
                             <!-- General Form Elements -->
                             <form action="{{route('update-category', ['id' => $Categories->id])}}" method="post" enctype="multipart/form-data">
