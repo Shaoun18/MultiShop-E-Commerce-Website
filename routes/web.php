@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ErrorController;
+use App\Http\Controllers\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,13 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::post('/update-subcategory/{id}',[SubCategoryController::class, 'update'])->name('update-subcategory');
     Route::get('/delete-subcategory/{id}',[SubCategoryController::class, 'delete'])->name('delete-subcategory');
     Route::get('/manage-subcategory',[SubCategoryController::class, 'manage'])->name('manage-subcategory');
+
+    Route::get('/add-brand',[BrandController::class, 'index'])->name('add-brand');
+    Route::post('/new-brand',[BrandController::class, 'create'])->name('new-brand');
+    Route::get('/edit-brand/{id}',[BrandController::class, 'edit'])->name('edit-brand');
+    Route::post('/update-brand/{id}',[BrandController::class, 'update'])->name('update-brand');
+    Route::get('/delete-brand/{id}',[BrandController::class, 'delete'])->name('delete-brand');
+    Route::get('/manage-brand',[BrandController::class, 'manage'])->name('manage-brand');
 
     Route::get('/profile',[ProfileController::class, 'index'])->name('profile');
     Route::get('/error',[ErrorController::class, 'index'])->name('error');
