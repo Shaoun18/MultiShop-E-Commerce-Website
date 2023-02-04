@@ -345,12 +345,12 @@
             </a>
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="charts-chartjs.html">
+                    <a href="{{route('add-unit')}}">
                         <i class="bi bi-circle"></i><span>Add Unit</span>
                     </a>
                 </li>
                 <li>
-                    <a href="charts-apexcharts.html">
+                    <a href="{{route('manage-unit')}}">
                         <i class="bi bi-circle"></i><span>Manage Unit</span>
                     </a>
                 </li>
@@ -399,12 +399,7 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="components-alerts.html">
-                        <i class="bi bi-circle"></i><span>Add User</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-accordion.html">
+                    <a href="{{route('manage-user')}}">
                         <i class="bi bi-circle"></i><span>Manage User</span>
                     </a>
                 </li>

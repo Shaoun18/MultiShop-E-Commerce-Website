@@ -8,6 +8,8 @@ use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UnitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +47,16 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::post('/update-brand/{id}',[BrandController::class, 'update'])->name('update-brand');
     Route::get('/delete-brand/{id}',[BrandController::class, 'delete'])->name('delete-brand');
     Route::get('/manage-brand',[BrandController::class, 'manage'])->name('manage-brand');
+
+    Route::get('/add-unit',[UnitController::class, 'index'])->name('add-unit');
+    Route::post('/new-unit',[UnitController::class, 'create'])->name('new-unit');
+    Route::get('/edit-unit/{id}',[UnitController::class, 'edit'])->name('edit-unit');
+    Route::post('/update-unit/{id}',[UnitController::class, 'update'])->name('update-unit');
+    Route::get('/delete-unit/{id}',[UnitController::class, 'delete'])->name('delete-unit');
+    Route::get('/manage-unit',[UnitController::class, 'manage'])->name('manage-unit');
+
+    Route::get('/manage-user',[UserController::class, 'manage'])->name('manage-user');
+    Route::get('/delete-user/{id}',[UserController::class, 'delete'])->name('delete-user');
 
     Route::get('/profile',[ProfileController::class, 'index'])->name('profile');
     Route::get('/error',[ErrorController::class, 'index'])->name('error');
