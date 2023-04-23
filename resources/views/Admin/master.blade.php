@@ -363,7 +363,7 @@
             </a>
             <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="icons-bootstrap.html">
+                    <a href="{{route('add-product')}}">
                         <i class="bi bi-circle"></i><span>Add Product</span>
                     </a>
                 </li>

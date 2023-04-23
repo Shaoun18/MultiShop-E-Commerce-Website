@@ -10,6 +10,7 @@ use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::post('/update-unit/{id}',[UnitController::class, 'update'])->name('update-unit');
     Route::get('/delete-unit/{id}',[UnitController::class, 'delete'])->name('delete-unit');
     Route::get('/manage-unit',[UnitController::class, 'manage'])->name('manage-unit');
+
+    Route::get('/add-product',[ProductController::class, 'index'])->name('add-product');
 
     Route::get('/manage-user',[UserController::class, 'manage'])->name('manage-user');
     Route::get('/delete-user/{id}',[UserController::class, 'delete'])->name('delete-user');
